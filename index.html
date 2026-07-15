@@ -40,4 +40,18 @@
 <script src="script.js"></script>
 
 </body>
+    <div id="datetime"></div>
+
+<script>
+function updateDateTime() {
+    let now = new Date();
+
+    document.getElementById("datetime").innerHTML =
+    "📅 " + now.toLocaleDateString() +
+    " | ⏰ " + now.toLocaleTimeString();
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
+</script>
 </html>
