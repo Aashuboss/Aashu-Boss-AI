@@ -1,1 +1,1 @@
-alert("Welcome to Aashu Boss AI");
+console.log("Aashu Boss AI Started Successfully");
