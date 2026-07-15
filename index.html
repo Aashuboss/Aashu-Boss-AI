@@ -10,21 +10,28 @@
 <h1>🤖 Aashu Boss AI Dashboard</h1>
 
 <p>AI Business & Trading Assistant</p>
-    <p>Version 1.0 | Powered by Aashu Boss AI</p>
-    <div class="card">
+<p>Version 1.0 | Powered by Aashu Boss AI</p>
+
+<div id="datetime"></div>
+
+<hr>
+
+<div class="card">
     <h2>🤖 Aashu Boss AI Status</h2>
     <p>✅ System Online</p>
     <p>🚀 AI Assistant Ready</p>
     <p>📊 Business & Trading Support Active</p>
-    </div>
-   <hr>
+</div>
+
+<hr>
 
 <h2>Dashboard</h2>
-    <div>
+
+<div>
     <button>🏠 Home</button>
     <button>🔍 Lead Finder</button>
     <button>👥 CRM</button>
-    </div>
+</div>
 
 <ul>
     <li>🏠 Dashboard</li>
@@ -35,18 +42,22 @@
     <li>📈 Trading Journal</li>
     <li>🎤 Voice Assistant</li>
     <li>⚙️ Settings</li>
-</ul> 
-    <div>
+</ul>
+
+<div class="card">
     <h3>📊 Today's Status</h3>
     <p>Total Leads: 0</p>
     <p>Clients: 0</p>
     <p>Revenue: ₹0</p>
-    </div>
+</div>
 
-<script src="script.js"></script>
+<div class="card">
+    <h2>📈 Trading Assistant</h2>
+    <p>🏦 Bank Nifty: Loading...</p>
+    <p>📊 Nifty 50: Loading...</p>
+    <p>⚡ Market Signal: Waiting...</p>
+</div>
 
-</body>
-    <div id="datetime"></div>
 
 <script>
 function updateDateTime() {
@@ -59,11 +70,9 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 updateDateTime();
-  <div class="card">
-    <h2>🤖 Aashu Boss AI Status</h2>
-    <p>✅ System Online</p>
-    <p>🚀 AI Assistant Ready</p>
-    <p>📊 Business & Trading Support Active</p>
-</div>  
 </script>
+
+<script src="script.js"></script>
+
+</body>
 </html>
