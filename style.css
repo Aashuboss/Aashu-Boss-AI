@@ -1,69 +1,88 @@
 body {
-    background-color: #0d1117;
+    background: #0f172a;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 40px;
+    padding: 20px;
 }
 
+
+/* Main Heading */
 h1 {
     color: #00ff99;
-    font-size: 40px;
-}
-
-p {
-    color: #cccccc;
-    font-size: 20px;
-}
-button {
-    background: #00ff99;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-button:hover {
-    background: white;
-    color: #0d1117;
-    transition: 0.3s;
-}
-div {
-    background: #161b22;
-    padding: 20px;
-    margin: 20px auto;
-    width: 320px;
-    border-radius: 12px;
-}
-body {
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-h1 {
     font-size: 35px;
 }
 
+
+/* Normal Text */
+p {
+    color: #cccccc;
+    font-size: 18px;
+}
+
+
+/* Cards */
 .card {
     background: #1e293b;
     padding: 20px;
     margin: 20px auto;
-    border-radius: 15px;
     max-width: 400px;
+    border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
+
+/* Date Time */
 #datetime {
     font-size: 20px;
     margin: 15px;
     color: #38bdf8;
 }
+
+
+/* Buttons */
+button {
+    background: #00ff99;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background: white;
+    color: #0d1117;
+    transition: 0.3s;
+}
+
+
+/* Chat Box */
+#chatbox {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 80px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+/* Input Box */
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+
+/* Mobile Design */
 @media (max-width: 600px) {
 
     h1 {
@@ -72,12 +91,14 @@ h1 {
 
     .card {
         width: 90%;
-        margin: 15px auto;
     }
 
     button {
         width: 90%;
-        margin: 8px;
+    }
+
+    input {
+        width: 90%;
     }
 
     ul {
