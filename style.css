@@ -38,3 +38,29 @@ div {
     width: 320px;
     border-radius: 12px;
 }
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+#datetime {
+    font-size: 20px;
+    margin: 15px;
+    color: #38bdf8;
+}
