@@ -39,3 +39,35 @@ function sendMessage() {
     document.getElementById("userInput").value = "";
 
 }
+function testVoice(){
+
+    let style = document.getElementById("voiceStyle").value;
+
+    let message = "";
+
+    if(style == "boss"){
+        message = "Yes Boss, Astra AI आपके आदेश के लिए तैयार है।";
+    }
+
+    else if(style == "deep"){
+        message = "Boss, मैं आपकी सहायता के लिए हमेशा तैयार हूँ।";
+    }
+
+    else if(style == "friendly"){
+        message = "Hello Boss, आज का दिन शानदार बनाने के लिए तैयार हैं।";
+    }
+
+    else{
+        message = "Astra AI Voice System Active.";
+    }
+
+
+    let speech = new SpeechSynthesisUtterance(message);
+
+    speech.lang = "hi-IN";
+
+    speech.rate = 0.8;
+
+    window.speechSynthesis.speak(speech);
+
+}
