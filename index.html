@@ -28,19 +28,10 @@
 <h2>Dashboard</h2>
 
 <div>
-    <button onclick="alert('🏠 Welcome to Aashu Boss AI Home')">
-        🏠 Home
-    </button>
-
-    <button onclick="alert('🔍 Lead Finder Module Coming Soon')">
-        🔍 Lead Finder
-    </button>
-
-    <button onclick="alert('👥 CRM System Loading Soon')">
-        👥 CRM
-    </button>
+    <button onclick="alert('🏠 Welcome Boss')">🏠 Home</button>
+    <button onclick="alert('🔍 Lead Finder Coming Soon')">🔍 Lead Finder</button>
+    <button onclick="alert('👥 CRM Loading Soon')">👥 CRM</button>
 </div>
-
 
 <ul>
     <li>🏠 Dashboard</li>
@@ -71,12 +62,21 @@
 
 
 <div class="card">
-    <h2>💬 Aashu Boss AI Chat</h2>
+    <h2>💬 Astra AI Chat</h2>
 
     <div id="chatbox">
-        <div id="chatbox">
-    🤖 Astra AI: Hello Boss! मैं आपकी Personal AI Assistant हूँ।
-            <div class="card">
+        🤖 Astra AI: Hello Boss! मैं आपकी Personal AI Assistant हूँ।
+    </div>
+
+    <input type="text" id="userInput" placeholder="अपना सवाल लिखें...">
+
+    <button onclick="sendMessage()">
+        🚀 Send
+    </button>
+</div>
+
+
+<div class="card">
     <h2>🤖 Astra AI Voice Assistant</h2>
 
     <p>🎤 बोलकर Astra AI को आदेश दें</p>
@@ -88,15 +88,6 @@
     <div id="voiceResult">
         Waiting for your command...
     </div>
-            </div>
-</div>
-    </div>
-
-    <input type="text" id="userInput" placeholder="अपना सवाल लिखें...">
-
-    <button onclick="sendMessage()">
-        🚀 Send
-    </button>
 </div>
 
 
@@ -112,25 +103,58 @@ function updateDateTime() {
 
 }
 
-setInterval(updateDateTime, 1000);
+setInterval(updateDateTime,1000);
 
 updateDateTime();
 
 
-function sendMessage() {
+
+function sendMessage(){
 
     let input = document.getElementById("userInput").value;
 
-    if(input == "") {
-        alert("कृपया अपना सवाल लिखें");
+    if(input==""){
+        alert("Boss, अपना सवाल लिखें");
         return;
     }
 
     document.getElementById("chatbox").innerHTML =
-    "👤 You: " + input +
-    "<br><br>🤖 AI: आपका सवाल प्राप्त हुआ। AI Analysis तैयार हो रहा है...";
+    "👤 Boss: " + input +
+    "<br><br>🤖 Astra AI: Yes Boss, आपका आदेश प्राप्त हुआ।";
 
-    document.getElementById("userInput").value = "";
+    document.getElementById("userInput").value="";
+}
+
+
+
+function startVoice(){
+
+    let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+    recognition.lang="hi-IN";
+
+    recognition.start();
+
+
+    recognition.onresult=function(event){
+
+        let command = event.results[0][0].transcript;
+
+
+        document.getElementById("voiceResult").innerHTML =
+        "👤 Boss: " + command +
+        "<br><br>🤖 Astra AI: Yes Boss, command received.";
+
+
+        let speech = new SpeechSynthesisUtterance(
+            "Yes Boss, command received"
+        );
+
+        speech.lang="hi-IN";
+
+        window.speechSynthesis.speak(speech);
+
+    }
 
 }
 
