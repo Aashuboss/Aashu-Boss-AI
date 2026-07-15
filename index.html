@@ -28,12 +28,19 @@
 <h2>Dashboard</h2>
 
 <div>
-    <button onclick="alert('🏠 Welcome to Aashu Boss AI Home')">🏠 Home</button>
+    <button onclick="alert('🏠 Welcome to Aashu Boss AI Home')">
+        🏠 Home
+    </button>
 
-<button onclick="alert('🔍 Lead Finder Module Coming Soon')">🔍 Lead Finder</button>
+    <button onclick="alert('🔍 Lead Finder Module Coming Soon')">
+        🔍 Lead Finder
+    </button>
 
-<button onclick="alert('👥 CRM System Loading Soon')">👥 CRM</button>
+    <button onclick="alert('👥 CRM System Loading Soon')">
+        👥 CRM
+    </button>
 </div>
+
 
 <ul>
     <li>🏠 Dashboard</li>
@@ -46,12 +53,23 @@
     <li>⚙️ Settings</li>
 </ul>
 
+
 <div class="card">
     <h3>📊 Today's Status</h3>
     <p>Total Leads: 0</p>
     <p>Clients: 0</p>
     <p>Revenue: ₹0</p>
 </div>
+
+
+<div class="card">
+    <h2>📈 Trading Assistant</h2>
+    <p>🏦 Bank Nifty: Loading...</p>
+    <p>📊 Nifty 50: Loading...</p>
+    <p>⚡ Market Signal: Waiting...</p>
+</div>
+
+
 <div class="card">
     <h2>💬 Aashu Boss AI Chat</h2>
 
@@ -65,33 +83,44 @@
         🚀 Send
     </button>
 </div>
-<div class="card">
-    <h2>📈 Trading Assistant</h2>
-    <div class="card">
-    <h2>📈 Trading Assistant</h2>
-    <p>🏦 Bank Nifty: Loading...</p>
-    <p>📊 Nifty 50: Loading...</p>
-    <p>⚡ Market Signal: Waiting...</p>
-    </div>
-    
-    <p>🏦 Bank Nifty: Loading...</p>
-    <p>📊 Nifty 50: Loading...</p>
-    <p>⚡ Market Signal: Waiting...</p>
-</div>
 
 
 <script>
+
 function updateDateTime() {
+
     let now = new Date();
 
     document.getElementById("datetime").innerHTML =
     "📅 " + now.toLocaleDateString() +
     " | ⏰ " + now.toLocaleTimeString();
+
 }
 
 setInterval(updateDateTime, 1000);
+
 updateDateTime();
+
+
+function sendMessage() {
+
+    let input = document.getElementById("userInput").value;
+
+    if(input == "") {
+        alert("कृपया अपना सवाल लिखें");
+        return;
+    }
+
+    document.getElementById("chatbox").innerHTML =
+    "👤 You: " + input +
+    "<br><br>🤖 AI: आपका सवाल प्राप्त हुआ। AI Analysis तैयार हो रहा है...";
+
+    document.getElementById("userInput").value = "";
+
+}
+
 </script>
+
 
 <script src="script.js"></script>
 
